@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="Recipes.Login"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Recipes"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="850">
+    <Grid>
+        <StackPanel Orientation="Vertical">
+            <StackPanel VerticalAlignment="Stretch" Height="auto" Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Username:" Margin="5 0 0 0"></TextBlock>
+                <TextBox x:Name="UserNameBox" Text="{Binding Username, Mode=TwoWay}" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="5 2 0 0"></TextBox>
+            </StackPanel>
+            <StackPanel VerticalAlignment="Stretch" Height="auto" Orientation="Horizontal">
+                <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Text="Password: " Margin="5 0 0 0"></TextBlock>
+                <PasswordBox x:Name="PasswordBox" PasswordChanged="password_changed" HorizontalAlignment="Left" VerticalAlignment="Top" Width="150" Margin="5 2 0 0"></PasswordBox>
+            </StackPanel>
+            <TextBlock x:Name="statusText" Margin="50 5 0 0" HorizontalAlignment="Left" />
+            <Button x:Name="LoginButton" Margin="90 10 0 0" Click="OnLoginClick" Width="75" HorizontalAlignment="Left">Login</Button>
+        </StackPanel>
+    </Grid>
+</UserControl>
